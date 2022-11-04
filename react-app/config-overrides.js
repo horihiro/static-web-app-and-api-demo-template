@@ -25,7 +25,7 @@ module.exports = function override(config, env) {
       template: path.join(PUBLIC, 'index.html'),
       favicon: path.join(PUBLIC, 'favicon.ico')
     }),
-    isDevelopment && new ReactRefreshWebpackPlugin(),
+    isDevelopment && new ReactRefreshWebpackPlugin({overlay: false}),
     new MiniCssExtractPlugin(),
     new InterpolateHtmlPlugin({
       PUBLIC_URL: ''
