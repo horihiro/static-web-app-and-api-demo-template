@@ -7,6 +7,25 @@
       "request": "attach",
       "port": 9229,
       "preLaunchTask": "func: host start"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "debug react",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "react-start",
+      "postDebugTask": "terminate-react-start",
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Compound",
+      "configurations": [
+        "Attach to Node Functions",
+        "debug react"
+      ],
+      "stopAll": true
     }
   ]
 }
