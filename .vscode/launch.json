@@ -2,30 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Attach to Node Functions",
+      "name": "Debug React/API",
       "type": "node",
       "request": "attach",
       "port": 9229,
-      "preLaunchTask": "func: host start"
-    },
-    {
-      "type": "chrome",
-      "request": "launch",
-      "name": "debug react",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}",
+      // "preLaunchTask": "func: host start"
       "preLaunchTask": "react-start",
-      "postDebugTask": "terminate-react-start",
-    }
-  ],
-  "compounds": [
-    {
-      "name": "Compound",
-      "configurations": [
-        "Attach to Node Functions",
-        "debug react"
-      ],
-      "stopAll": true
+      "postDebugTask": "terminate-all",
     }
   ]
 }

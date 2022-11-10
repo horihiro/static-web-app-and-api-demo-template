@@ -56,21 +56,22 @@
         "env": {
           "BROWSER": "none"
         }
-      }
+      },
+      "dependsOn": "func: host start"
     },
     {
-      "label": "terminate-react-start",
-      "command": "${input:terminate}",
+      "label": "terminate-all",
+      "command": "${input:terminate-all}",
       "type": "shell",
-      "problemMatcher": []
+      "problemMatcher": [],
     }
   ],
   "inputs": [
     {
-      "id": "terminate",
+      "id": "terminate-all",
       "type": "command",
       "command": "workbench.action.tasks.terminate",
-      "args": "react-start"
+      "args": "terminateAll"
     }
   ]
 }
