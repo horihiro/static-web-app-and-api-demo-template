@@ -2,11 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Attach to Node Functions",
+      "name": "Debug React/API",
       "type": "node",
       "request": "attach",
       "port": 9229,
-      "preLaunchTask": "func: host start"
+      // "preLaunchTask": "func: host start"
+      "preLaunchTask": "react-start",
+      "postDebugTask": "terminate-all",
     }
   ]
 }
