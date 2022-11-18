@@ -29,6 +29,15 @@
       }
     },
     {
+      "type": "shell",
+      "label": "npm install (react)",
+      "command": "npm install",
+      "options": {
+        "cwd": "${workspaceFolder}/react-app"
+      },
+      "dependsOn": "func: host start"
+    },
+    {
       "label": "react-start",
       "detail": "react-scripts start for debug",
       "type": "npm",
@@ -57,7 +66,7 @@
           "BROWSER": "none"
         }
       },
-      "dependsOn": "func: host start"
+      "dependsOn": "npm install (react)"
     },
     {
       "label": "terminate-all",
