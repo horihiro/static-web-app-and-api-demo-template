@@ -34,9 +34,11 @@
 
 .positive {
   color:rgb(58, 135, 173);
+  font-size:17px;
 }
 .negative {
   color:rgb(185, 74, 72);
+  font-size:17px;
 }
 .neutral {
   color:rgb(68, 68, 68);
